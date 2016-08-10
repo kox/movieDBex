@@ -1,6 +1,7 @@
 import fetch from 'isomorphic-fetch'
 import { getMovieDBSearchUrl } from '../config'
 
+export const SELECT_MOVIE = 'SELECT_MOVIE'
 export const SEARCH_MOVIES = 'SEARCH_MOVIES'
 export const RECEIVE_MOVIES = 'RECEIVE_MOVIES'
 
@@ -44,8 +45,25 @@ function shouldFetchMovies(state, movieDB) {
   if (!movies) {
     return true
   }
+
   if (movies.isFetching) {
     return false
   }
+
   return false
+}
+
+export function fetchMoviesIfNeeded(movieDB) {
+  return (dispatch, getState) => {
+    if (shouldFetchMovies(getState(), movieDB)) {
+      return dispatch(fetchMovies(movieDB))
+    }
+  }
+}
+
+export function selectMovie(movie) {
+  return {
+    type: SELECT_MOVIE,
+    movie
+  }
 }

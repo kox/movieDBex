@@ -54,7 +54,8 @@ The main reason to use this library is to simplify the flow of data between the 
 
 For this application, I will create 2 actions:
 
-* SEARCH_MOVIES: This action will be dispatched when users submit the searcher.
+* SELECT_MOVIE: This action will be dispatched when users submit the searcher.
+* SEARCH_MOVIES: This action will be dispached when we need to search for movies
 * RECEIVE_MOVIES: This action will be dispatched when the API sent back the movies
 
 ### Reducers
