@@ -1,6 +1,15 @@
 import { combineReducers } from 'redux'
-import { SEARCH_MOVIES, RECEIVE_MOVIES } from '../actions'
+import { SELECT_MOVIE, SEARCH_MOVIES,
+  RECEIVE_MOVIES } from '../actions'
 
+function selectedMovie(state = '', action) {
+  switch (action.type) {
+    case SELECT_MOVIE:
+      return action.movie
+    default:
+      return state
+  }
+}
 
 function movies(state = {
   isFetching: false,
@@ -9,12 +18,14 @@ function movies(state = {
   switch (action.type) {
     case SEARCH_MOVIES:
       return Object.assign({}, state, {
-        isFetching: true
+        isFetching: true,
+        didInvalidate: false,
       })
     case RECEIVE_MOVIES:
       return Object.assign({}, state, {
         isFetching: false,
-        items: action.movies
+        items: action.movies,
+        didInvalidate: false
       })
     default:
       return state
@@ -34,7 +45,8 @@ function moviesByMovieDB(state = { }, action) {
 }
 
 const rootReducer = combineReducers({
-  moviesByMovieDB
+  moviesByMovieDB,
+  selectedMovie
 })
 
 export default rootReducer

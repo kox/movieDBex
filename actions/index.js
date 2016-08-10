@@ -42,6 +42,10 @@ function fetchMovies(movieDB) {
 function shouldFetchMovies(state, movieDB) {
   const movies = state.moviesByMovieDB[movieDB]
 
+  if (movieDB.length === 0) {
+    return false
+  }
+
   if (!movies) {
     return true
   }
