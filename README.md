@@ -18,7 +18,7 @@ To implement this appication, I will follow this workflow:
 3. Create basic React Components where the information will be rendered
 4. Implement Redux actions, reducers and store
 5. Connect the React handlers with the actions and render the state
-6. Testing
+6. Testing (Unfortunatelly I ran out of the time due issues with redux)
 7. Documentation
 
 ## Packages
@@ -61,6 +61,14 @@ For this application, I will create 2 actions:
 ### Reducers
 
 About the reducers, I will need to create pure functions to return the current state of the application depending of the action. If SEARCH_MOVIE was dispatched, we will show a loading message.  If we receive the movies, we will assign them to our state
+
+## Instalation
+
+npm install
+
+## Running
+
+npm start
 
 
 ### Thanks
