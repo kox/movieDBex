@@ -4,7 +4,12 @@ export default class Searcher extends Component {
   render() {
     return (
       <div>
-        FORM
+        <form>
+          <input />
+          <button type="submit">
+            Search Movie
+          </button>
+        </form>
       </div>
     )
   }
