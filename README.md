@@ -38,5 +38,15 @@ babel-polyfill / babel-core / babel-loader / babel-preset-es2015 / babel-preset-
 ### Webserver, runner and hot reloading
 express / node-libs-browser / webpack / webpack-dev-middleware / webpack-hot-middleware
 
+## UI
+
+To render the application we will have just few components like
+
+* APP: Component container where the events will be dispatched
+* Searcher: Component where the input search will be included
+* Movies: Component to render all movies or a loading message
+
+
+
 ### Thanks
 
