@@ -13,13 +13,26 @@ class App extends Component {
   }
 
   render() {
+    const movies = [{
+      title: 'Movie 1',
+    }, {
+      title: 'Movie 100'
+    }]
+    const isFetching = false
+    const isEmpty = movies.length === 0
+
     return (
       <div>
         <h1>MovideDB, Hello World!</h1>
 
-        <Searcher onSubmit={this.handleSubmit}/>
+        {isEmpty ?
+          (isFetching ?
+            <p>Loading, please wait</p> :
+            <p>Empty</p>) :
+          <Searcher onSubmit={this.handleSubmit}/>
+        }
 
-        <Movies />
+        <Movies movies={movies} />
       </div>
     )
   }
