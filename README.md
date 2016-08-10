@@ -57,6 +57,10 @@ For this application, I will create 2 actions:
 * SEARCH_MOVIES: This action will be dispatched when users submit the searcher.
 * RECEIVE_MOVIES: This action will be dispatched when the API sent back the movies
 
+### Reducers
+
+About the reducers, I will need to create pure functions to return the current state of the application depending of the action. If SEARCH_MOVIE was dispatched, we will show a loading message.  If we receive the movies, we will assign them to our state
+
 
 ### Thanks
 
