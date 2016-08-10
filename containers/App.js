@@ -18,12 +18,16 @@ class App extends Component {
     }, {
       title: 'Movie 100'
     }]
+    const isEmpty = movies.length === 0
 
     return (
       <div>
         <h1>MovideDB, Hello World!</h1>
 
-        <Searcher onSubmit={this.handleSubmit}/>
+        {isEmpty ?
+          <p>Empty</p> :
+          <Searcher onSubmit={this.handleSubmit}/>
+        }
 
         <Movies movies={movies} />
       </div>
