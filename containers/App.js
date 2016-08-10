@@ -13,13 +13,19 @@ class App extends Component {
   }
 
   render() {
+    const movies = [{
+      title: 'Movie 1',
+    }, {
+      title: 'Movie 100'
+    }]
+
     return (
       <div>
         <h1>MovideDB, Hello World!</h1>
 
         <Searcher onSubmit={this.handleSubmit}/>
 
-        <Movies />
+        <Movies movies={movies} />
       </div>
     )
   }

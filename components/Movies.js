@@ -1,12 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 
 export default class Movies extends Component {
   render() {
     return (
       <ul>
-        <li>Movie 1</li>
-        <li>Movie 2</li>
+        {this.props.movies.map((movie, i) =>
+          <li key={i}>{movie.title}</li>
+        )}
       </ul>
     )
   }
 }
+
+Movies.propTypes = {
+  movies: PropTypes.array.isRequired
+}
+
