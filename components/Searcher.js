@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+
 export default class Searcher extends Component {
   render() {
     const { onSubmit } = this.props

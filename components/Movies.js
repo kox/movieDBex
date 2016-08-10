@@ -15,4 +15,3 @@ export default class Movies extends Component {
 Movies.propTypes = {
   movies: PropTypes.array.isRequired
 }
-
