@@ -13,13 +13,30 @@ For this application, I will integrate a solid solution based in React and Redux
 ## Workflow
 
 To implement this appication, I will follow this workflow:
-1- Install list of packages required
-2- Prepare the stack to run ES6 using babel and integrate hot loading for agile development
-3- Create basic React Components where the information will be rendered
-4- Implement Redux actions, reducers and store
-5- Connect the React handlers with the actions and render the state
-6- Testing
-7- Documentation
+1. Install list of packages required
+2. Prepare the stack to run ES6 using babel and integrate hot loading for agile development
+3. Create basic React Components where the information will be rendered
+4. Implement Redux actions, reducers and store
+5. Connect the React handlers with the actions and render the state
+6. Testing
+7. Documentation
+
+## Packages
+
+### React
+react / react-dom
+
+### Redux
+redux / redux-logger / redux-thunk
+
+### Async HTTP call
+isomorphic-fetch
+
+### Babel (ES3 Compilant)
+babel-polyfill / babel-core / babel-loader / babel-preset-es2015 / babel-preset-react / babel-preset-react-hmre
+
+### Webserver, runner and hot reloading
+express / node-libs-browser / webpack / webpack-dev-middleware / webpack-hot-middleware
 
 ### Thanks
 
