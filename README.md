@@ -46,6 +46,16 @@ To render the application we will have just few components like
 * Searcher: Component where the input search will be included
 * Movies: Component to render all movies or a loading message
 
+## REDUX
+
+The main reason to use this library is to simplify the flow of data between the view and the model. Abstracting the communication between then and implmenting oneway flow, allows to have full control of the state
+
+### Actions
+
+For this application, I will create 2 actions:
+
+* SEARCH_MOVIES: This action will be dispatched when users submit the searcher.
+* RECEIVE_MOVIES: This action will be dispatched when the API sent back the movies
 
 
 ### Thanks
