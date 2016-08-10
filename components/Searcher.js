@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-
+import React, { Component, PropTypes } from 'react'
 export default class Searcher extends Component {
   render() {
+    const { onSubmit } = this.props
     let input
 
     return (
@@ -9,9 +9,15 @@ export default class Searcher extends Component {
         <form onSubmit={e => {
           e.preventDefault()
 
-          console.log(input.value)
+          if (!input.value.trim()) {
+            return
+          }
+
+          onSubmit(input.value.trim())
+
+          input.value = ''
         }}>
-          <input ref={ movie => { input = movie }} />
+          <input ref={ node => { input = node }} />
           <button type="submit">
             Search Movie
           </button>
@@ -19,5 +25,9 @@ export default class Searcher extends Component {
       </div>
     )
   }
+}
+
+Searcher.propTypes = {
+  onSubmit: PropTypes.func.isRequired
 }
 
