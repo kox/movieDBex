@@ -35,8 +35,6 @@ class App extends Component {
       <div>
         <h1>MovideDB, Hello World!</h1>
 
-        <Searcher onSubmit={this.handleSubmit}/>
-
         {isEmpty ?
           (isSearchFetching ?
             <p>Searching.... please wait</p> :
