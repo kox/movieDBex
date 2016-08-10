@@ -18,6 +18,7 @@ class App extends Component {
     }, {
       title: 'Movie 100'
     }]
+    const isFetching = false
     const isEmpty = movies.length === 0
 
     return (
@@ -25,7 +26,9 @@ class App extends Component {
         <h1>MovideDB, Hello World!</h1>
 
         {isEmpty ?
-          <p>Empty</p> :
+          (isFetching ?
+            <p>Loading, please wait</p> :
+            <p>Empty</p>) :
           <Searcher onSubmit={this.handleSubmit}/>
         }
 
