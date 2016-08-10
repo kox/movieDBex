@@ -1,4 +1,6 @@
 import React, { Component, PropTypes } from 'react'
+import Searcher from '../components/Searcher'
+import Movies from '../components/Movies'
 
 class App extends Component {
   constructor(props) {
@@ -9,6 +11,10 @@ class App extends Component {
     return (
       <div>
         <h1>MovideDB, Hello World!</h1>
+
+        <Searcher />
+
+        <Movies />
       </div>
     )
   }
